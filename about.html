@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang BPM FPIK UBT</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo-bpm.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="navbar-logo">
+    <div class="logo-icon">
+        <img src="logo-bpm.png" alt="Logo BPM" onerror="this.src='https://via.placeholder.com/40x40?text=BPM'">
+    </div>
+    <h1>BPM FPIK UBT</h1>
+</div>
+<div class="nav-menu">
+<a href="index.html">Beranda</a>
+<a href="about.html">Tentang kami</a>
+<a href="author.html">Pengarang</a>
+</div>
+</nav>
+
+<section class="section">
+<h2 class="section-title">Struktur Kepengurusan</h2>
+<div class="card-container">
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="/dr-asbar.jpeg" alt="Dr. Asbar Laga" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Penasehat</h3>
+<p>Memberikan arahan dan bimbingan strategis kepada BPM.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Dr. Asbar Laga, S.T., M.Si.</p>
+<button class="card-btn-small" onclick="openMemberModal('penasehat')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Tuti Alawiyah" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Pembina</h3>
+<p>Dosen pembimbing yang memberikan arahan dan bimbingan kepada BPM.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Tuti Alawiyah, S.Si., M.Sc.</p>
+<button class="card-btn-small" onclick="openMemberModal('pembina')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="/mas-kardi.jpeg" alt="Sukardi" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Ketua Umum</h3>
+<p>Pemimpin tertinggi BPM FPIK UBT yang mengoordinasikan seluruh kinerja.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Sukardi, S.Pi</p>
+<button class="card-btn-small" onclick="openMemberModal('ketua')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Muhammad Wahyudi" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Sekretaris Umum</h3>
+<p>Berfungsi sebagai pengelolaan dan pelayanan administrasi.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Muhammad Wahyudi</p>
+<button class="card-btn-small" onclick="openMemberModal('sekretaris')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Weda Octavia Kasing" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Bendahara Umum</h3>
+<p>Berfungsi sebagai pengelolaan anggaran kepengurusan.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Weda Octavia Kasing</p>
+<button class="card-btn-small" onclick="openMemberModal('bendahara')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Jela Tomas" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Komisi I - Legislatif</h3>
+<p>Menampung, menyalurkan, dan memperjuangkan aspirasi mahasiswa FPIK.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Jela Tomas</p>
+<button class="card-btn-small" onclick="openMemberModal('komisi1')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Hafid" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Komisi II - Aspiratif & Advokasi</h3>
+<p>Mengelola dan mengawasi anggaran kegiatan kemahasiswaan.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Hafid</p>
+<button class="card-btn-small" onclick="openMemberModal('komisi2')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Sebastian" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Komisi III - Pengawasan</h3>
+<p>Menegakkan peraturan dan kode etik organisasi mahasiswa.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Sebastian</p>
+<button class="card-btn-small" onclick="openMemberModal('komisi3')">Lihat Detail</button>
+</div>
+</div>
+
+<div class="card small-card">
+<div class="member-avatar">
+    <img src="https://randomuser.me/api/portraits/men/92.jpg" alt="Muhammad Deriansyah" onerror="this.src='https://via.placeholder.com/100x100?text=Photo'">
+</div>
+<div class="card-content">
+<h3>Komisi IV - Kominfo</h3>
+<p>Mengelola informasi dan komunikasi publik BPM.</p>
+<p style="margin-top: 10px; font-size: 0.85rem; color: var(--secondary);">Muhammad Deriansyah</p>
+<button class="card-btn-small" onclick="openMemberModal('komisi4')">Lihat Detail</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+<h2 class="section-title">Visi & Misi</h2>
+<div class="card-container">
+<div class="card">
+<div class="card-content">
+<h3>Visi</h3>
+<p>Menjadikan BPM FPIK UBT sebagai lembaga legislatif mahasiswa yang aspiratif, transparan, dan akuntabel dalam mewujudkan mahasiswa FPIK yang berkarakter dan berprestasi.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<h3>Misi</h3>
+<ul style="margin-left: 20px; line-height: 1.8;">
+<li>Menampung dan memperjuangkan aspirasi mahasiswa</li>
+<li>Mengawasi kinerja eksekutif mahasiswa</li>
+<li>Meningkatkan partisipasi mahasiswa dalam kegiatan</li>
+<li>Menjalin kerjasama dengan berbagai pihak</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Modal Popup untuk Detail Anggota -->
+<div id="memberModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeMemberModal()">&times;</span>
+<div id="member-modal-body"></div>
+</div>
+</div>
+
+<footer>
+<p>© 2026 BPM FPIK UBT</p>
+</footer>
+
+<script>
+function openMemberModal(type) {
+const modal = document.getElementById("memberModal");
+const modalBody = document.getElementById("member-modal-body");
+let content = "";
+
+if (type === 'penasehat') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="/dr-asbar.jpeg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Dr. Asbar Laga, S.T., M.Si.</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Penasehat BPM FPIK UBT</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIP:</strong> 197508152005011002</li>
+<li><strong>Jabatan Akademik:</strong> Lektor Kepala</li>
+<li><strong>Pendidikan Terakhir:</strong> S3 - Universitas Gadjah Mada</li>
+<li><strong>Bidang Keahlian:</strong> Manajemen Sumber Daya Perikanan</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Memberikan arahan strategis, nasihat, dan bimbingan kepada seluruh pengurus BPM FPIK UBT dalam menjalankan roda organisasi.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: asbar.laga@ubt.ac.id</p>
+`;
+} 
+else if (type === 'pembina') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://randomuser.me/api/portraits/women/68.jpg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Tuti Alawiyah, S.Si., M.Sc.</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Pembina BPM FPIK UBT</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIP:</strong> 198205152010012001</li>
+<li><strong>Jabatan Akademik:</strong> Lektor</li>
+<li><strong>Pendidikan Terakhir:</strong> S2 - Institut Pertanian Bogor</li>
+<li><strong>Bidang Keahlian:</strong> Biologi Perikanan</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Membimbing dan mengarahkan BPM dalam menjalankan program kerja serta memastikan setiap kegiatan sesuai dengan aturan yang berlaku.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: tuti.alawiyah@ubt.ac.id</p>
+`;
+}
+else if (type === 'ketua') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="/mas-kardi.jpeg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Sukardi, S.Pi</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Ketua Umum BPM FPIK UBT</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIM:</strong> 2240101005</li>
+<li><strong>Program Studi:</strong> Akuakultur</li>
+<li><strong>Semester:</strong> 8 (Delapan)</li>
+<li><strong>Tempat, Tanggal Lahir:</strong> Nunukan, 12 Oktober 2003</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Memimpin seluruh jajaran BPM, mengoordinasikan kinerja komisi, menjadi penghubung antara BPM dengan pihak fakultas, serta memimpin sidang pleno.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: sukardi17@gmail.com</p>
+`;
+}
+else if (type === 'sekretaris') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://randomuser.me/api/portraits/men/55.jpg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Muhammad Wahyudi</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Sekretaris Umum BPM FPIK UBT</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIM:</strong> 202301045</li>
+<li><strong>Program Studi:</strong> Ilmu Kelautan</li>
+<li><strong>Semester:</strong> 6</li>
+<li><strong>Tempat, Tanggal Lahir:</strong> Malinau, 22 Juli 2004</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Mengelola administrasi kesekretariatan, mendokumentasikan setiap rapat dan kegiatan, serta mengarsipkan surat menyurat BPM.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: wahyudi@student.ubt.ac.id | WhatsApp: 0812-3456-7892</p>
+`;
+}
+else if (type === 'bendahara') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://randomuser.me/api/portraits/women/90.jpg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Weda Octavia Kasing</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Bendahara Umum BPM FPIK UBT</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIM:</strong> 202302012</li>
+<li><strong>Program Studi:</strong> Budidaya Perairan</li>
+<li><strong>Semester:</strong> 6</li>
+<li><strong>Tempat, Tanggal Lahir:</strong> Nunukan, 10 Desember 2003</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Mengelola dan mengawasi keuangan BPM, menyusun laporan anggaran, serta memastikan transparansi penggunaan dana.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: weda@student.ubt.ac.id | WhatsApp: 0812-3456-7893</p>
+`;
+}
+else if (type === 'komisi1') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://randomuser.me/api/portraits/men/28.jpg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Jela Tomas</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Ketua Komisi I - Legislatif</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIM:</strong> 202303008</li>
+<li><strong>Program Studi:</strong> Manajemen Sumber Daya Perairan</li>
+<li><strong>Semester:</strong> 6</li>
+<li><strong>Tempat, Tanggal Lahir:</strong> Tarakan, 5 Mei 2004</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Menampung, menyalurkan, dan memperjuangkan aspirasi mahasiswa FPIK melalui pembentukan peraturan dan kebijakan.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Anggota Komisi</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li>Andreas Simanjuntak (Sekretaris Komisi)</li>
+<li>Maria Ulfah (Anggota)</li>
+<li>Rizky Ramadhan (Anggota)</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: jela@student.ubt.ac.id | WhatsApp: 0812-3456-7894</p>
+`;
+}
+else if (type === 'komisi2') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://randomuser.me/api/portraits/men/75.jpg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Hafid</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Ketua Komisi II - Aspiratif dan Advokasi</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIM:</strong> 202304021</li>
+<li><strong>Program Studi:</strong> Ilmu Kelautan</li>
+<li><strong>Semester:</strong> 6</li>
+<li><strong>Tempat, Tanggal Lahir:</strong> Berau, 18 September 2003</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Melakukan advokasi terhadap permasalahan mahasiswa dan mengawasi anggaran kegiatan kemahasiswaan.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Anggota Komisi</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li>Nur Aisyah (Sekretaris Komisi)</li>
+<li>Fajar Pratama (Anggota)</li>
+<li>Lisa Permata (Anggota)</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: hafid@student.ubt.ac.id | WhatsApp: 0812-3456-7895</p>
+`;
+}
+else if (type === 'komisi3') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="https://randomuser.me/api/portraits/men/42.jpg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Sebastian</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Ketua Komisi III - Pengawasan</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIM:</strong> 202305017</li>
+<li><strong>Program Studi:</strong> Budidaya Perairan</li>
+<li><strong>Semester:</strong> 6</li>
+<li><strong>Tempat, Tanggal Lahir:</strong> Tarakan, 30 Januari 2004</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Mengawasi kinerja organisasi mahasiswa dan menegakkan peraturan serta kode etik yang berlaku.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Anggota Komisi</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li>Rina Marlina (Sekretaris Komisi)</li>
+<li>Doni Saputra (Anggota)</li>
+<li>Wulan Sari (Anggota)</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: sebastian@student.ubt.ac.id | WhatsApp: 0812-3456-7896</p>
+`;
+}
+else if (type === 'komisi4') {
+content = `
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="/mas-der.jpeg" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent);">
+</div>
+<h2 style="color:#0F4C81; margin-bottom: 10px; text-align: center;">Muhammad Deriansyah</h2>
+<p style="text-align: center; color: var(--secondary); margin-bottom: 20px;">Ketua Komisi IV - Kominfo</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Data Diri</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li><strong>NIM:</strong> 2240101036</li>
+<li><strong>Program Studi:</strong> Akuakultur</li>
+<li><strong>Semester:</strong> 8 (Delapan)</li>
+<li><strong>Tempat, Tanggal Lahir:</strong> Long Bia, 12 Desember 2004</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Tugas dan Fungsi</h3>
+<p style="line-height: 1.8; margin-bottom: 20px;">Mengelola informasi, publikasi, dokumentasi, dan komunikasi publik BPM melalui media sosial dan website.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Anggota Komisi</h3>
+<ul style="margin-left: 20px; margin-bottom: 20px; line-height: 1.8;">
+<li>Kamsidar (Teknologi Hasil Perikanan)</li>
+<li>Agustin Zahra Nur Putri (Teknologi Hasil Perikanan)</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom: 10px;">Kontak</h3>
+<p>Email: deriansyah471@gmail.com</p>
+`;
+}
+
+modalBody.innerHTML = content;
+modal.style.display = "block";
+document.body.style.overflow = "hidden";
+}
+
+function closeMemberModal() {
+const modal = document.getElementById("memberModal");
+modal.style.display = "none";
+document.body.style.overflow = "auto";
+}
+
+window.onclick = function(event) {
+const modal = document.getElementById("memberModal");
+if (event.target == modal) {
+closeMemberModal();
+}
+}
+
+document.addEventListener('keydown', function(event) {
+if (event.key === "Escape") {
+closeMemberModal();
+}
+});
+</script>
+
+</body>
+</html>

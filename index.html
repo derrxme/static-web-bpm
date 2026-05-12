@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPM FPIK UBT | Beranda</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo-bpm.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo-area">
+    <div class="logo-wrapper">
+        <div class="logo-icon">
+            <img src="logo-bpm.png" alt="Logo BPM" onerror="this.src='https://via.placeholder.com/40x40?text=BPM'">
+        </div>
+        <h1>BPM FPIK UBT</h1>
+    </div>
+</div>
+<div class="nav-menu">
+<a href="index.html">Beranda</a>
+<a href="about.html">Tentang</a>
+<a href="author.html">Pengarang</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="hero-content">
+<h2>Untuk FPIK Kami Ada.</h2>
+<p>Website resmi Badan Perwakilan Mahasiswa Fakultas Perikanan dan Ilmu Kelautan Universitas Borneo Tarakan.</p>
+<a href="#kegiatan" class="btn">Lihat Kegiatan</a>
+</div>
+</header>
+
+<section class="section" id="kegiatan">
+<h2 class="section-title">Kegiatan BPM</h2>
+<div class="card-container">
+<div class="card">
+<img src="/upgrading-image.jpeg" class="card-img" alt="Upgrading">
+<div class="card-content">
+<h3>Kegiatan Upgrading Ormawa</h3>
+<p>Kegiatan peningkatan kapasitas organisasi mahasiswa FPIK UBT.</p>
+<button class="card-btn" onclick="openModal('aspirasi')">Selengkapnya</button>
+</div>
+</div>
+<div class="card">
+<img src="https://picsum.photos/id/26/500/300" class="card-img" alt="Pengawasan">
+<div class="card-content">
+<h3>Pengawasan Organisasi</h3>
+<p>BPM melakukan pengawasan terhadap kegiatan organisasi mahasiswa.</p>
+<button class="card-btn" onclick="openModal('pengawasan')">Selengkapnya</button>
+</div>
+</div>
+<div class="card">
+<img src="https://picsum.photos/id/30/500/300" class="card-img" alt="Sosial">
+<div class="card-content">
+<h3>Kegiatan Sosial</h3>
+<p>Kegiatan sosial mahasiswa untuk mempererat solidaritas FPIK UBT.</p>
+<button class="card-btn" onclick="openModal('sosial')">Selengkapnya</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Modal Popup -->
+<div id="myModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
+<div id="modal-body"></div>
+</div>
+</div>
+
+<footer>
+<p>© 2026 BPM FPIK UBT</p>
+</footer>
+
+<script>
+function openModal(type) {
+const modal = document.getElementById("myModal");
+const modalBody = document.getElementById("modal-body");
+let content = "";
+
+if (type === 'aspirasi') {
+content = `
+<h2 style="color:#0F4C81; margin-bottom:20px;">Tentang Upgrading Ormawa</h2>
+<div style="margin-bottom:20px;">
+<img src="/foto-si-tiker.jpeg" style="width:100%; border-radius:12px; margin-bottom:20px;">
+</div>
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Deskripsi Kegiatan</h3>
+<p style="line-height:1.8; margin-bottom:20px;">BPM melaksanakan tugas sebagai pengawasan di kegiatan upgrading yang dilaksanakan oleh ormawa BEM FPIK UBT, pada hari Sabtu, 11 April 2026 di ruangan 303 dan 304 lantai 3 FPIK UBT.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Tujuan Kegiatan</h3>
+<p style="line-height:1.8; margin-bottom:20px;">Meningkatkan kapasitas, kualitas, dan profesionalisme pengurus ORMAWA FPIK UBT dalam menjalakan fungsi organisasi, kepemimpinan, serta pelayanan terhadap mahasiswa secara efektif, aktif, dan bertanggung jawab.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Jadwal Pelaksanaan</h3>
+<p style="line-height:1.8; margin-bottom:20px;">Upgrading ORMAWA FPIK UBT ini dilaksakan dalam setiap 1 periode kepengurusan.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Peserta</h3>
+<p style="line-height:1.8; margin-bottom:20px;">Peserta upgrading ORMAWA FPIK UBT, adalah pengurus ORMAWA FPIK UBT.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Kontak</h3>
+<p>Hubungi: Komisi IV KOMINFO BPM FPIK UBT - Email: bpmfpikubt9@gmail.com</p>
+`;
+} 
+else if (type === 'pengawasan') {
+content = `
+<h2 style="color:#0F4C81; margin-bottom:20px;">Pengawasan Organisasi Mahasiswa</h2>
+<div style="margin-bottom:20px;">
+<img src="https://picsum.photos/id/26/600/300" style="width:100%; border-radius:12px; margin-bottom:20px;">
+</div>
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Deskripsi Kegiatan</h3>
+<p style="line-height:1.8; margin-bottom:20px;">Kegiatan pengawasan yang dilakukan BPM terhadap seluruh organisasi mahasiswa di lingkungan FPIK UBT untuk memastikan setiap kegiatan berjalan sesuai dengan aturan dan anggaran dasar.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Tujuan Pengawasan</h3>
+<ul style="margin-left:20px; margin-bottom:20px; line-height:1.8;">
+<li>Memastikan transparansi anggaran organisasi</li>
+<li>Mengawasi pelaksanaan program kerja</li>
+<li>Memberikan evaluasi kinerja organisasi</li>
+<li>Mencegah penyimpangan organisasi</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Ruang Lingkup</h3>
+<ul style="margin-left:20px; margin-bottom:20px; line-height:1.8;">
+<li>Himpunan Mahasiswa (HIMA)</li>
+<li>Unit Kegiatan Mahasiswa (UKM)</li>
+<li>Komunitas minat dan bakat</li>
+<li>Organisasi tingkat fakultas</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Periode Pengawasan</h3>
+<p style="line-height:1.8; margin-bottom:20px;">Pengawasan dilakukan setiap akhir bulan dan dilaporkan dalam sidang pleno BPM.</p>
+`;
+} 
+else if (type === 'sosial') {
+content = `
+<h2 style="color:#0F4C81; margin-bottom:20px;">Kegiatan Sosial Mahasiswa</h2>
+<div style="margin-bottom:20px;">
+<img src="https://picsum.photos/id/30/600/300" style="width:100%; border-radius:12px; margin-bottom:20px;">
+</div>
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Deskripsi Kegiatan</h3>
+<p style="line-height:1.8; margin-bottom:20px;">Kegiatan sosial yang diselenggarakan BPM bersama seluruh elemen FPIK UBT untuk meningkatkan solidaritas dan kepedulian sosial antar mahasiswa serta masyarakat sekitar.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Tujuan Sosial</h3>
+<ul style="margin-left:20px; margin-bottom:20px; line-height:1.8;">
+<li>Mempererat tali silaturahmi mahasiswa FPIK</li>
+<li>Meningkatkan rasa kepedulian sosial</li>
+<li>Membantu masyarakat yang membutuhkan</li>
+<li>Membangun citra positif FPIK UBT</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Bentuk Kegiatan</h3>
+<ul style="margin-left:20px; margin-bottom:20px; line-height:1.8;">
+<li>Bakti sosial di pesisir pantai</li>
+<li>Donasi untuk korban bencana alam</li>
+<li>Kerja bakti lingkungan kampus</li>
+<li>Santunan anak yatim & panti asuhan</li>
+<li>Donor darah</li>
+</ul>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Jadwal Kegiatan</h3>
+<p style="line-height:1.8; margin-bottom:20px;">Kegiatan sosial dilaksanakan setiap 3 bulan sekali atau sesuai dengan kebutuhan mendesak.</p>
+
+<h3 style="color:#1B9AAA; margin-bottom:10px;">Cara Berpartisipasi</h3>
+<p>Mahasiswa dapat mendaftar melalui link yang diumumkan di media sosial BPM atau menghubungi divisi sosial BPM FPIK UBT.</p>
+`;
+}
+
+modalBody.innerHTML = content;
+modal.style.display = "block";
+document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+const modal = document.getElementById("myModal");
+modal.style.display = "none";
+document.body.style.overflow = "auto";
+}
+
+window.onclick = function(event) {
+const modal = document.getElementById("myModal");
+if (event.target == modal) {
+closeModal();
+}
+}
+
+document.addEventListener('keydown', function(event) {
+if (event.key === "Escape") {
+closeModal();
+}
+});
+</script>
+
+</body>
+</html>
