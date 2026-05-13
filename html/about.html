@@ -21,7 +21,7 @@
 <div class="nav-menu">
 <a href="../index.html">Beranda</a>
 <a href="about.html">Tentang</a>
-<a href="author.html">Pengarang</a>
+<a href="author.html">Pengembang</a>
 </div>
 </nav>
 
@@ -31,7 +31,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. Asbar Laga">
+        <img src="../asset/image-asset/dr-asbar.jpeg" alt="Dr. Asbar Laga">
     </div>
     <div class="card-content">
         <h3>Penasehat</h3>
@@ -43,7 +43,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Tuti Alawiyah">
+        <img src="../asset/image-asset/" alt="Tuti Alawiyah">
     </div>
     <div class="card-content">
         <h3>Pembina</h3>
@@ -55,7 +55,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sukardi">
+        <img src="../asset/image-asset/mas-kardi.jpeg" alt="Sukardi">
     </div>
     <div class="card-content">
         <h3>Ketua Umum</h3>
@@ -172,6 +172,7 @@
 
 <footer>
 <p>© 2026 BPM FPIK UBT</p>
+<br><p>Versi 0.1.1</p>
 </footer>
 
 <script>
@@ -181,16 +182,16 @@ const modalBody = document.getElementById("member-modal-body");
 let content = "";
 
 if (type === 'penasehat') {
-content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/45.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Dr. Asbar Laga, S.T., M.Si.</h2><p>Penasehat BPM</p><p>Email: asbar.laga@ubt.ac.id</p></div>`;
+content = `<div style="text-align:center"><img src="../asset/image-asset/dr-asbar.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Dr. Asbar Laga, S.T., M.Si.</h2><p>Penasehat BPM</p><p>Email: asbar.laga@ubt.ac.id</p></div>`;
 }
 else if (type === 'pembina') {
-content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/women/68.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Tuti Alawiyah, S.Si., M.Sc.</h2><p>Pembina BPM</p><p>Email: tuti.alawiyah@ubt.ac.id</p></div>`;
+content = `<div style="text-align:center"><img src="../asset/image-asset/dr-asbar.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Tuti Alawiyah, S.Si., M.Sc.</h2><p>Pembina BPM</p><p>Email: tuti.alawiyah@ubt.ac.id</p></div>`;
 }
 else if (type === 'ketua') {
-content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Sukardi, S.Pi</h2><p>Ketua Umum BPM</p><p>WhatsApp: 0812-3456-7891</p></div>`;
+content = `<div style="text-align:center"><img src="../asset/image-asset/mas-kardi.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Sukardi, S.Pi</h2><p>Ketua Umum BPM</p><p>Instagram : @Adewww.22</p></div>`;
 }
 else if (type === 'sekretaris') {
-content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/55.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Wahyudi</h2><p>Sekretaris Umum</p><p>WA: 0812-3456-7892</p></div>`;
+content = `<div style="text-align:center"><img src="../asset/image-asset/sekum.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Wahyudi</h2><p>Sekretaris Umum</p><p>Instagram : @Wahyu.dec</p></div>`;
 }
 else if (type === 'bendahara') {
 content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/women/90.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Weda Octavia Kasing</h2><p>Bendahara Umum</p><p>WA: 0812-3456-7893</p></div>`;
@@ -205,7 +206,7 @@ else if (type === 'komisi3') {
 content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/42.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Sebastian</h2><p>Ketua Komisi III</p><p>Anggota: Rina, Doni, Wulan</p></div>`;
 }
 else if (type === 'komisi4') {
-content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/92.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Deriansyah</h2><p>Ketua Komisi IV</p><p>Email: deriansyah@student.ubt.ac.id</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/mas-der-v2.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Deriansyah</h2><p>Ketua Komisi IV</p><p>Email: deriansyah@student.ubt.ac.id</p></div>`;
 }
 
 modalBody.innerHTML = content;
