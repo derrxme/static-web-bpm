@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang BPM FPIK UBT</title>
+<link rel="stylesheet" href="../asset/style.css">
+<link rel="stylesheet" href="../asset/about-card.css">
+<link rel="icon" href="../image/logo-bpm.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="navbar-logo">
+    <div class="logo-icon">
+        <img src="../asset/image-asset/logo-bpm.png" alt="Logo BPM" onerror="this.src='https://via.placeholder.com/40x40?text=BPM'">
+    </div>
+    <h1>BPM FPIK UBT</h1>
+</div>
+<div class="nav-menu">
+<a href="../index.html">Beranda</a>
+<a href="about.html">Tentang</a>
+<a href="author.html">Pengarang</a>
+</div>
+</nav>
+
+<section class="section">
+<h2 class="section-title">Struktur Kepengurusan</h2>
+<div class="card-container">
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. Asbar Laga">
+    </div>
+    <div class="card-content">
+        <h3>Penasehat</h3>
+        <p>Memberikan arahan dan bimbingan strategis kepada BPM.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Dr. Asbar Laga, S.T., M.Si.</p>
+        <button class="card-btn-small" onclick="openMemberModal('penasehat')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Tuti Alawiyah">
+    </div>
+    <div class="card-content">
+        <h3>Pembina</h3>
+        <p>Dosen pembimbing yang memberikan arahan kepada BPM.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Tuti Alawiyah, S.Si., M.Sc.</p>
+        <button class="card-btn-small" onclick="openMemberModal('pembina')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Sukardi">
+    </div>
+    <div class="card-content">
+        <h3>Ketua Umum</h3>
+        <p>Pemimpin tertinggi BPM FPIK UBT.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Sukardi, S.Pi</p>
+        <button class="card-btn-small" onclick="openMemberModal('ketua')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Muhammad Wahyudi">
+    </div>
+    <div class="card-content">
+        <h3>Sekretaris Umum</h3>
+        <p>Pengelolaan dan pelayanan administrasi.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Muhammad Wahyudi</p>
+        <button class="card-btn-small" onclick="openMemberModal('sekretaris')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Weda Octavia Kasing">
+    </div>
+    <div class="card-content">
+        <h3>Bendahara Umum</h3>
+        <p>Pengelolaan anggaran kepengurusan.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Weda Octavia Kasing</p>
+        <button class="card-btn-small" onclick="openMemberModal('bendahara')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Jela Tomas">
+    </div>
+    <div class="card-content">
+        <h3>Komisi I - Legislatif</h3>
+        <p>Menampung aspirasi mahasiswa FPIK.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Jela Tomas</p>
+        <button class="card-btn-small" onclick="openMemberModal('komisi1')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Hafid">
+    </div>
+    <div class="card-content">
+        <h3>Komisi II - Aspiratif</h3>
+        <p>Advokasi permasalahan mahasiswa.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Hafid</p>
+        <button class="card-btn-small" onclick="openMemberModal('komisi2')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Sebastian">
+    </div>
+    <div class="card-content">
+        <h3>Komisi III - Pengawasan</h3>
+        <p>Menegakkan peraturan organisasi.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Sebastian</p>
+        <button class="card-btn-small" onclick="openMemberModal('komisi3')">Lihat Detail</button>
+    </div>
+</div>
+
+<div class="about-card">
+    <div class="member-avatar">
+        <img src="https://randomuser.me/api/portraits/men/92.jpg" alt="Muhammad Deriansyah">
+    </div>
+    <div class="card-content">
+        <h3>Komisi IV - Kominfo</h3>
+        <p>Mengelola informasi publik BPM.</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Muhammad Deriansyah</p>
+        <button class="card-btn-small" onclick="openMemberModal('komisi4')">Lihat Detail</button>
+    </div>
+</div>
+
+</div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+<h2 class="section-title">Visi & Misi</h2>
+<div class="card-container">
+<div class="card">
+<div class="card-content">
+<h3>Visi</h3>
+<p>Menjadikan BPM FPIK UBT sebagai lembaga legislatif mahasiswa yang aspiratif, transparan, dan akuntabel.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<h3>Misi</h3>
+<ul style="margin-left: 20px; line-height: 1.8;">
+<li>Menampung aspirasi mahasiswa</li>
+<li>Mengawasi kinerja eksekutif</li>
+<li>Meningkatkan partisipasi mahasiswa</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div id="memberModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeMemberModal()">&times;</span>
+<div id="member-modal-body"></div>
+</div>
+</div>
+
+<footer>
+<p>© 2026 BPM FPIK UBT</p>
+</footer>
+
+<script>
+function openMemberModal(type) {
+const modal = document.getElementById("memberModal");
+const modalBody = document.getElementById("member-modal-body");
+let content = "";
+
+if (type === 'penasehat') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/45.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Dr. Asbar Laga, S.T., M.Si.</h2><p>Penasehat BPM</p><p>Email: asbar.laga@ubt.ac.id</p></div>`;
+}
+else if (type === 'pembina') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/women/68.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Tuti Alawiyah, S.Si., M.Sc.</h2><p>Pembina BPM</p><p>Email: tuti.alawiyah@ubt.ac.id</p></div>`;
+}
+else if (type === 'ketua') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Sukardi, S.Pi</h2><p>Ketua Umum BPM</p><p>WhatsApp: 0812-3456-7891</p></div>`;
+}
+else if (type === 'sekretaris') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/55.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Wahyudi</h2><p>Sekretaris Umum</p><p>WA: 0812-3456-7892</p></div>`;
+}
+else if (type === 'bendahara') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/women/90.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Weda Octavia Kasing</h2><p>Bendahara Umum</p><p>WA: 0812-3456-7893</p></div>`;
+}
+else if (type === 'komisi1') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/28.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Jela Tomas</h2><p>Ketua Komisi I</p><p>Anggota: Andreas, Maria, Rizky</p></div>`;
+}
+else if (type === 'komisi2') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/75.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Hafid</h2><p>Ketua Komisi II</p><p>Anggota: Nur Aisyah, Fajar, Lisa</p></div>`;
+}
+else if (type === 'komisi3') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/42.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Sebastian</h2><p>Ketua Komisi III</p><p>Anggota: Rina, Doni, Wulan</p></div>`;
+}
+else if (type === 'komisi4') {
+content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/92.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Deriansyah</h2><p>Ketua Komisi IV</p><p>Email: deriansyah@student.ubt.ac.id</p></div>`;
+}
+
+modalBody.innerHTML = content;
+modal.style.display = "block";
+document.body.style.overflow = "hidden";
+}
+
+function closeMemberModal() {
+const modal = document.getElementById("memberModal");
+modal.style.display = "none";
+document.body.style.overflow = "auto";
+}
+
+window.onclick = function(event) {
+const modal = document.getElementById("memberModal");
+if (event.target == modal) closeMemberModal();
+}
+</script>
+</body>
+</html>
