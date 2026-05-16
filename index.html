@@ -22,9 +22,8 @@
 </div>
 <div class="nav-menu">
 <a href="index.html">Beranda</a>
-<a href="html/about.html">Tentang</a>
-<a href="html/author.html">Pengembang</a>
-<a href="qr-generator.html">QR Code</a>
+<a href="html/about.html">Tentang BPM</a>
+<a href="html/dashboard/dashboard.html">Dashboard</a>
 </div>
 </nav>
 
@@ -42,7 +41,7 @@
 
 <!-- Card 1 - Upgrading Ormawa -->
 <div class="gallery-card" data-card-id="0" data-auto-slide="3000">
-    <img src="asset/image-asset/mas-kardi-dkk.jpeg" class="card-img" alt="Upgrading" id="card-img-0">
+    <img src="asset/image-asset/rapat-senat.jpeg" class="card-img" alt="Upgrading" id="card-img-0">
     <div class="card-content">
         <h3>Kegiatan Upgrading Ormawa</h3>
         <p>Kegiatan peningkatan kapasitas organisasi mahasiswa FPIK UBT.</p>
@@ -154,7 +153,7 @@
 
 <footer>
 <p>© 2026 BPM FPIK UBT</p>
-<br><p>Versi 0.1.1</p>
+<br><p>Versi 0.1.4 | Home</p>
 </footer>
 
 <script>
@@ -163,10 +162,10 @@ const kegiatanImages = {
     0: {
         title: 'Kegiatan Upgrading Ormawa',
         images: [
-            'asset/image-asset/mas-kardi-dkk.jpeg',
             'asset/image-asset/img-pwsn.jpeg',
-            'https://picsum.photos/id/20/500/300',
-            'https://picsum.photos/id/21/500/300'
+            'asset/image-asset/upgrading-image.jpeg',
+            'asset/image-asset/pemateri-jjn.jpg',
+            'asset/image-asset/foto-si-tiker.jpeg'
         ],
         deskripsi: 'BPM melaksanakan tugas sebagai pengawasan di kegiatan upgrading yang dilaksanakan oleh ormawa BEM FPIK UBT, pada hari Sabtu, 11 April 2026 di ruangan 303 dan 304 lantai 3 FPIK UBT.',
         tujuan: 'Meningkatkan kapasitas, kualitas, dan profesionalisme pengurus ORMAWA FPIK UBT.',
@@ -177,17 +176,17 @@ const kegiatanImages = {
         images: [
             'asset/image-asset/img-pengawasan.jpeg',
             'asset/image-asset/sosial-ra.jpeg',
-            'https://picsum.photos/id/26/500/300',
-            'https://picsum.photos/id/27/500/300'
+            'asset/image-asset/upgrading-image.jpeg',
+            'asset/image-asset/sosial-sop.jpeg'
         ],
-        deskripsi: 'Kegiatan pengawasan yang dilakukan BPM terhadap seluruh organisasi mahasiswa di lingkungan FPIK UBT.',
+        deskripsi: 'BPM melaksanakan tugasnya sebagai pengawas kebijakan antar ORMAWA, dalam setiap kegiatan sehingga dapat di evaluasi atau memperbaiki kinerja kedepannya (Sukardi, S.Pi., 2026) ',
         tujuan: 'Memastikan transparansi anggaran dan mengawasi program kerja.',
         kontak: 'Email: bpmfpikubt9@gmail.com'
     },
     2: {
         title: 'Kegiatan Sosial Mahasiswa',
         images: [
-            'asset/image-asset/sosial-sop.jpeg',
+            'asset/image-asset/akua-ks.jpeg',
             'asset/image-asset/img-pwsn.jpeg',
             'https://picsum.photos/id/30/500/300',
             'https://picsum.photos/id/31/500/300'
@@ -209,9 +208,9 @@ const kegiatanImages = {
         kontak: 'Email: bpmfpikubt9@gmail.com'
     },
     4: {
-        title: 'Pelantikan Pengurus BPM',
+        title: 'Pelantikan Pengurus ORMAWA 2025-2026',
         images: [
-            'https://picsum.photos/id/100/500/300',
+            'asset/image-asset/akua-pl15.jpeg',
             'https://picsum.photos/id/101/500/300',
             'https://picsum.photos/id/102/500/300',
             'https://picsum.photos/id/103/500/300'
@@ -381,7 +380,7 @@ function openModal(type) {
 function updateModalContent() {
     if (!currentModalData) return;
     
-    const mainImg = document.getElementById('modal-main-img');
+    const mainImg = document.getElementById('modal-main-img'); 
     const counterCurrent = document.getElementById('modal-counter-current');
     const counterTotal = document.getElementById('modal-counter-total');
     const descriptionDiv = document.getElementById('modal-description');

@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tentang BPM FPIK UBT</title>
-<link rel="stylesheet" href="../asset/style.css">
-<link rel="stylesheet" href="../asset/about-card.css">
-<link rel="icon" href="../image/logo-bpm.png">
+<link rel="stylesheet" href="asset/style.css">
+<link rel="stylesheet" href="asset/about-card.css">
+<link rel="icon" href="asset/image-asset/logo-bpm.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,14 +14,14 @@
 <nav class="navbar">
 <div class="navbar-logo">
     <div class="logo-icon">
-        <img src="../asset/image-asset/logo-bpm.png" alt="Logo BPM" onerror="this.src='https://via.placeholder.com/40x40?text=BPM'">
+        <img src="asset/image-asset/logo-bpm.png" alt="Logo BPM" onerror="this.src='https://via.placeholder.com/40x40?text=BPM'">
     </div>
     <h1>BPM FPIK UBT</h1>
 </div>
 <div class="nav-menu">
-<a href="../index.html">Beranda</a>
-<a href="about.html">Tentang</a>
-<a href="author.html">Pengembang</a>
+<a href="index.html">Beranda</a>
+<a href="html/about.html">Tentang</a>
+<a href="html/dashboard/dashboard.html">Dashboard</a>
 </div>
 </nav>
 
@@ -31,7 +31,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="../asset/image-asset/dr-asbar.jpeg" alt="Dr. Asbar Laga">
+        <img src="asset/image-asset/dr-asbar.jpeg" alt="Dr. Asbar Laga">
     </div>
     <div class="card-content">
         <h3>Penasehat</h3>
@@ -43,7 +43,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="../asset/image-asset/" alt="Tuti Alawiyah">
+        <img src="asset/image-asset/mas-tuty.jpeg" alt="Tuti Alawiyah">
     </div>
     <div class="card-content">
         <h3>Pembina</h3>
@@ -55,7 +55,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="../asset/image-asset/mas-kardi.jpeg" alt="Sukardi">
+        <img src="asset/image-asset/mas-kardi.jpeg" alt="Sukardi">
     </div>
     <div class="card-content">
         <h3>Ketua Umum</h3>
@@ -67,7 +67,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Muhammad Wahyudi">
+        <img src="asset/image-asset/sekum.jpeg" alt="Muhammad Wahyudi">
     </div>
     <div class="card-content">
         <h3>Sekretaris Umum</h3>
@@ -79,7 +79,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Weda Octavia Kasing">
+        <img src="asset/image-asset/bu-bend.jpeg" alt="Weda Octavia Kasing">
     </div>
     <div class="card-content">
         <h3>Bendahara Umum</h3>
@@ -115,7 +115,7 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Sebastian">
+        <img src="asset/image-asset/om-kita.jpeg" alt="Sebastian">
     </div>
     <div class="card-content">
         <h3>Komisi III - Pengawasan</h3>
@@ -127,12 +127,12 @@
 
 <div class="about-card">
     <div class="member-avatar">
-        <img src="https://randomuser.me/api/portraits/men/92.jpg" alt="Muhammad Deriansyah">
+        <img src="asset/image-asset/bang-der.jpg" alt="Muhammad Deriansyah">
     </div>
     <div class="card-content">
         <h3>Komisi IV - Kominfo</h3>
         <p>Mengelola informasi publik BPM.</p>
-        <p style="font-size: 0.85rem; color: var(--secondary);">Muhammad Deriansyah</p>
+        <p style="font-size: 0.85rem; color: var(--secondary);">Prof. Dr.Ir. Muhammad Deriansyah, S.Pi.,M.Sc.,Ph.D</p>
         <button class="card-btn-small" onclick="openMemberModal('komisi4')">Lihat Detail</button>
     </div>
 </div>
@@ -172,7 +172,7 @@
 
 <footer>
 <p>© 2026 BPM FPIK UBT</p>
-<br><p>Versi 0.1.1</p>
+<br><p>Versi 0.1.4 | Tentang</p>
 </footer>
 
 <script>
@@ -182,19 +182,19 @@ const modalBody = document.getElementById("member-modal-body");
 let content = "";
 
 if (type === 'penasehat') {
-content = `<div style="text-align:center"><img src="../asset/image-asset/dr-asbar.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Dr. Asbar Laga, S.T., M.Si.</h2><p>Penasehat BPM</p><p>Email: asbar.laga@ubt.ac.id</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/dr-asbar.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Dr. Asbar Laga, S.T., M.Si.</h2><p>Penasehat BPM</p><p>Email: asbar.laga@ubt.ac.id</p></div>`;
 }
 else if (type === 'pembina') {
-content = `<div style="text-align:center"><img src="../asset/image-asset/dr-asbar.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Tuti Alawiyah, S.Si., M.Sc.</h2><p>Pembina BPM</p><p>Email: tuti.alawiyah@ubt.ac.id</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/mas-tuty.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Tuti Alawiyah, S.Si., M.Sc.</h2><p>Pembina BPM</p><p>Email: tuti.alawiyah@ubt.ac.id</p></div>`;
 }
 else if (type === 'ketua') {
-content = `<div style="text-align:center"><img src="../asset/image-asset/mas-kardi.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Sukardi, S.Pi</h2><p>Ketua Umum BPM</p><p>Instagram : @Adewww.22</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/mas-kardi.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Sukardi, S.Pi</h2><p>Ketua Umum BPM</p><p>Instagram : @Adewww.22</p></div>`;
 }
 else if (type === 'sekretaris') {
-content = `<div style="text-align:center"><img src="../asset/image-asset/sekum.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Wahyudi</h2><p>Sekretaris Umum</p><p>Instagram : @Wahyu.dec</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/sekum.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Wahyudi</h2><p>Sekretaris Umum</p><p>Instagram : @Wahyu.dec</p></div>`;
 }
 else if (type === 'bendahara') {
-content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/women/90.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Weda Octavia Kasing</h2><p>Bendahara Umum</p><p>WA: 0812-3456-7893</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/bu-bend.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Weda Octavia Kasing</h2><p>Bendahara Umum</p><p>WA: 0812-3456-7893</p></div>`;
 }
 else if (type === 'komisi1') {
 content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/28.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Jela Tomas</h2><p>Ketua Komisi I</p><p>Anggota: Andreas, Maria, Rizky</p></div>`;
@@ -203,10 +203,10 @@ else if (type === 'komisi2') {
 content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/75.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Hafid</h2><p>Ketua Komisi II</p><p>Anggota: Nur Aisyah, Fajar, Lisa</p></div>`;
 }
 else if (type === 'komisi3') {
-content = `<div style="text-align:center"><img src="https://randomuser.me/api/portraits/men/42.jpg" style="width:150px;height:150px;border-radius:50%"><h2>Sebastian</h2><p>Ketua Komisi III</p><p>Anggota: Rina, Doni, Wulan</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/om-kita.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Sebastian</h2><p>Ketua Komisi III</p><p>Anggota: Rina, Doni, Wulan</p></div>`;
 }
 else if (type === 'komisi4') {
-content = `<div style="text-align:center"><img src="asset/image-asset/mas-der-v2.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Deriansyah</h2><p>Ketua Komisi IV</p><p>Email: deriansyah@student.ubt.ac.id</p></div>`;
+content = `<div style="text-align:center"><img src="asset/image-asset/mas-der-v2.jpeg" style="width:150px;height:150px;border-radius:50%"><h2>Muhammad Deriansyah</h2><p>Ketua Komisi IV</p><p>Anggota: Kamsidar, Agustin</p><p>Email: deriansyah@student.ubt.ac.id</p></div>`;
 }
 
 modalBody.innerHTML = content;

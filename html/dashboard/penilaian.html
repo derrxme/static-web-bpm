@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPM FPIK UBT | Penilaian Kinerja Dosen</title>
+    <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/penilaian.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="asset/image-asset/logo-bpm.png">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-logo">
+        <div class="logo-icon">
+            <img src="asset/image-asset/logo-bpm.png" alt="Logo BPM">
+        </div>
+        <h1>BPM FPIK UBT</h1>
+    </div>
+    <div class="nav-menu">
+        <a href="index.html">Beranda</a>
+        <a href="html/about.html">Tentang</a>
+        <a href="html/dashboard/dashboard.html">Dashboard</a>
+        <!-- <div class="dropdown">
+            <button class="dropbtn">More</button>
+            <div class="dropdown-content">
+                <a href="penilaian.html">Penilaian Dosen</a>
+                <a href="aspirasi.html">Aspirasi</a>
+                <a href="sejarah.html">Sejarah BPM</a>
+                <a href="administrasi.html">Administrasi ORMAWA</a>
+                <a href="../qr-generator.html">QR Code</a>
+                <a href="author.html">Pengembang</a>
+                <a href="download-surat-bimbingan.html">Berkas Perkuliahan</a>
+            </div>
+        </div> -->
+    </div>
+</nav>
+
+<section class="section">
+    <div class="penilaian-container">
+        <div class="penilaian-header">
+            <h2>Penilaian Kinerja Dosen</h2>
+            <p>BPM FPIK UBT | Periode Semester Genap 2025/2026</p>
+        </div>
+
+        <div id="alertMessage" class="alert"></div>
+
+        <div class="info-box">
+            <p>Informasi: Penilaian ini akan dikirim langsung ke database BPM FPIK UBT. Identitas responden akan dirahasiakan.</p>
+        </div>
+
+        <form id="penilaianForm">
+            <h3 class="section-title-custom">Identitas Responden</h3>
+            <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Data Anda akan dirahasiakan dan hanya digunakan untuk verifikasi internal.</p>
+            
+            <div class="row-2cols">
+                <div class="form-group">
+                    <label>Nama Lengkap <span class="required">*</span></label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+                <div class="form-group">
+                    <label>NIM <span class="required">*</span></label>
+                    <input type="text" id="nim" placeholder="Masukkan NIM (9-10 digit)" required>
+                </div>
+            </div>
+
+            <div class="row-2cols">
+                <div class="form-group">
+                    <label>Program Studi <span class="required">*</span></label>
+                    <select id="prodi" required>
+                        <option value="">Pilih Program Studi</option>
+                        <option value="Akuakultur">Akuakultur</option>
+                        <option value="Manajemen Sumberdaya Perairan">Manajemen Sumberdaya Perairan</option>
+                        <option value="Teknologi Hasil Perikanan">Teknologi Hasil Perikanan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Semester <span class="required">*</span></label>
+                    <select id="semester" required>
+                        <option value="">Pilih Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email (Opsional)</label>
+                <input type="email" id="emailResponden" placeholder="Masukkan email untuk mendapat konfirmasi">
+                <small style="color: #666; font-size: 0.7rem;">Isi jika ingin mendapat salinan penilaian</small>
+            </div>
+
+            <h3 class="section-title-custom">Data Dosen yang Dinilai</h3>
+            
+            <div class="form-group">
+                <label>Nama Dosen <span class="required">*</span></label>
+                <select id="namaDosen" required>
+                    <option value="">Pilih Nama Dosen</option>
+                    <option value="Rukisah, S.Pi., MP., Ph.D">Rukisah, S.Pi., MP., Ph.D</option>
+                    <option value="Dr. Heppi Iromo, S.Pi., M.Si">Dr. Heppi Iromo, S.Pi., M.Si</option>
+                    <option value="Dr. Azis, S.Pi., M.Si">Dr. Azis, S.Pi., M.Si</option>
+                    <option value="Jimmy Cahyadi, S.Pi., M.Si">Jimmy Cahyadi, S.Pi., M.Si</option>
+                    <option value="Dr. Ery Gusman, S.Pi., MP">Dr. Ery Gusman, S.Pi., MP</option>
+                    <option value="Dr. Muhammad Amien H, S.Pi., M.Si">Dr. Muhammad Amien H, S.Pi., M.Si</option>
+                    <option value="Dr. Gloria Ika Satriani, S.Pi., M.Si">Dr. Gloria Ika Satriani, S.Pi., M.Si</option>
+                    <option value="Dr. Awaludin, S.Pi., M.Si">Dr. Awaludin, S.Pi., M.Si</option>
+                    <option value="Ricky Febrinaldy S, S.Pd., M.Si">Ricky Febrinaldy S, S.Pd., M.Si</option>
+                    <option value="Zainuddin, S.Pi., M.Sc">Zainuddin, S.Pi., M.Sc</option>
+                    <option value="Burhanuddin Ihsan, S.Pi., M.Sc">Burhanuddin Ihsan, S.Pi., M.Sc</option>
+                    <option value="Diana Maulianawati, S.Pi., M.Si">Diana Maulianawati, S.Pi., M.Si</option>
+                    <option value="Kartina, S.Pd., M.Sc">Kartina, S.Pd., M.Sc</option>
+                    <option value="Miska Sanda Lembang, S.Si., M.Si">Miska Sanda Lembang, S.Si., M.Si</option>
+                    <option value="Diana Purnama Sari, S.Pi., M.Si">Diana Purnama Sari, S.Pi., M.Si</option>
+                    <option value="Rini Mastuti, S.Pi., M.Si">Rini Mastuti, S.Pi., M.Si</option>
+                    <option value="Prof.Dr.Ir. Abdul Jabarsyah, M.Sc">Prof.Dr.Ir. Abdul Jabarsyah, M.Sc</option>
+                    <option value="Dr. Muhammad Firdaus, S.Pi., M.Si">Dr. Muhammad Firdaus, S.Pi., M.Si</option>
+                    <option value="Dr. Amrullah Taqwa, ST., M.Si">Dr. Amrullah Taqwa, ST., M.Si</option>
+                    <option value="Dr. Asbar Laga, ST., M.Si">Dr. Asbar Laga, ST., M.Si</option>
+                    <option value="Dhimas Wiharyanto, S.Pi., M.Si">Dhimas Wiharyanto, S.Pi., M.Si</option>
+                    <option value="Encik Weliyadi, S.Pi., M.Sc">Encik Weliyadi, S.Pi., M.Sc</option>
+                    <option value="Dr. Ratno Achyani, S.Pi., M.Si">Dr. Ratno Achyani, S.Pi., M.Si</option>
+                    <option value="Dr. Dori Rachmawani, S.Pi., M.Si">Dr. Dori Rachmawani, S.Pi., M.Si</option>
+                    <option value="Dr. Muhamad Roem, S.Kel., M.Si">Dr. Muhamad Roem, S.Kel., M.Si</option>
+                    <option value="Gazali Salim, S.Kel., M.Si">Gazali Salim, S.Kel., M.Si</option>
+                    <option value="Yulma, S.Pi., M.Si">Yulma, S.Pi., M.Si</option>
+                    <option value="Heni Irawati, S.Pd., M.Sc">Heni Irawati, S.Pd., M.Sc</option>
+                    <option value="Tuty Alawiyah, S.Si., M.Sc">Tuty Alawiyah, S.Si., M.Sc</option>
+                    <option value="M.Gandri Haryono, S.Kel., M.P">M.Gandri Haryono, S.Kel., M.P</option>
+                    <option value="Syamsidar Gaffar, S.Kel., M.Si">Syamsidar Gaffar, S.Kel., M.Si</option>
+                    <option value="Ardy Andreas Bernard Kase, S.Kel., M.Si">Ardy Andreas Bernard Kase, S.Kel., M.Si</option>
+                    <option value="Dian Islamia Muhtar, S.Pi., M.Si">Dian Islamia Muhtar, S.Pi., M.Si</option>
+                    <option value="Muhammad Yusfi Yusuf, S.Pi., M.Si">Muhammad Yusfi Yusuf, S.Pi., M.Si</option>
+                    <option value="Taufiq Ahmad Romdoni, S.Pi, M.Si">Taufiq Ahmad Romdoni, S.Pi, M.Si</option>
+                    <option value="Yushra, S.Kel., M.Si">Yushra, S.Kel., M.Si</option>
+                    <option value="Ira Maya Abdiani, S.Pi., M.Sc">Ira Maya Abdiani, S.Pi., M.Sc</option>
+                    <option value="M. Fadnan Akhmadi, S.Pi., M.Sc">M. Fadnan Akhmadi, S.Pi., M.Sc</option>
+                    <option value="Tri Paus Hasiholan Hutapea, S.Si., M.Si">Tri Paus Hasiholan Hutapea, S.Si., M.Si</option>
+                    <option value="Imra, S.Pi., M.Si">Imra, S.Pi., M.Si</option>
+                    <option value="Nurhikma, S.Pi., M.Si">Nurhikma, S.Pi., M.Si</option>
+                    <option value="Stephanie Bija, S.Pd., M.Si">Stephanie Bija, S.Pd., M.Si</option>
+                    <option value="Novi Luthfiyana, S.Pi., M.Si">Novi Luthfiyana, S.Pi., M.Si</option>
+                    <option value="Christine Dyta Nugraeni, S.Si., M.Si">Christine Dyta Nugraeni, S.Si., M.Si</option>
+                    <option value="Reni Tri Cahyani, S.Pi., M.Si">Reni Tri Cahyani, S.Pi., M.Si</option>
+                    <option value="Sumarlin, S.Si., M.Si">Sumarlin, S.Si., M.Si</option>
+                    <option value="Nurasmi, S.Pd., M.Si">Nurasmi, S.Pd., M.Si</option>
+                    <option value="Mutmainnah, S.Kel., M.Si">Mutmainnah, S.Kel., M.Si</option>
+                    <option value="Arlina Hidayati, S.Pi., M.Si">Arlina Hidayati, S.Pi., M.Si</option>
+                    <option value="Nurmaida, S.Pi., M.Si">Nurmaida, S.Pi., M.Si</option>
+                    <option value="Istiqamah Muslimin, S.Pi., M.Si">Istiqamah Muslimin, S.Pi., M.Si</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Mata Kuliah <span class="required">*</span></label>
+                <input type="text" id="matakuliah" placeholder="Masukkan nama mata kuliah" required>
+            </div>
+
+            <h3 class="section-title-custom">Penilaian Kinerja Dosen</h3>
+            
+            <div class="rating-container">
+                <div class="rating-item">
+                    <span class="rating-label">1. Penguasaan Materi</span>
+                    <div class="stars">
+                        <input type="radio" name="rating_materi" value="1" id="materi1"><label for="materi1">★</label>
+                        <input type="radio" name="rating_materi" value="2" id="materi2"><label for="materi2">★</label>
+                        <input type="radio" name="rating_materi" value="3" id="materi3"><label for="materi3">★</label>
+                        <input type="radio" name="rating_materi" value="4" id="materi4"><label for="materi4">★</label>
+                        <input type="radio" name="rating_materi" value="5" id="materi5"><label for="materi5">★</label>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <span class="rating-label">2. Metode Penyampaian</span>
+                    <div class="stars">
+                        <input type="radio" name="rating_metode" value="1" id="metode1"><label for="metode1">★</label>
+                        <input type="radio" name="rating_metode" value="2" id="metode2"><label for="metode2">★</label>
+                        <input type="radio" name="rating_metode" value="3" id="metode3"><label for="metode3">★</label>
+                        <input type="radio" name="rating_metode" value="4" id="metode4"><label for="metode4">★</label>
+                        <input type="radio" name="rating_metode" value="5" id="metode5"><label for="metode5">★</label>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <span class="rating-label">3. Kehadiran & Ketepatan Waktu</span>
+                    <div class="stars">
+                        <input type="radio" name="rating_kehadiran" value="1" id="kehadiran1"><label for="kehadiran1">★</label>
+                        <input type="radio" name="rating_kehadiran" value="2" id="kehadiran2"><label for="kehadiran2">★</label>
+                        <input type="radio" name="rating_kehadiran" value="3" id="kehadiran3"><label for="kehadiran3">★</label>
+                        <input type="radio" name="rating_kehadiran" value="4" id="kehadiran4"><label for="kehadiran4">★</label>
+                        <input type="radio" name="rating_kehadiran" value="5" id="kehadiran5"><label for="kehadiran5">★</label>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <span class="rating-label">4. Interaksi dengan Mahasiswa</span>
+                    <div class="stars">
+                        <input type="radio" name="rating_interaksi" value="1" id="interaksi1"><label for="interaksi1">★</label>
+                        <input type="radio" name="rating_interaksi" value="2" id="interaksi2"><label for="interaksi2">★</label>
+                        <input type="radio" name="rating_interaksi" value="3" id="interaksi3"><label for="interaksi3">★</label>
+                        <input type="radio" name="rating_interaksi" value="4" id="interaksi4"><label for="interaksi4">★</label>
+                        <input type="radio" name="rating_interaksi" value="5" id="interaksi5"><label for="interaksi5">★</label>
+                    </div>
+                </div>
+
+                <div class="rating-item">
+                    <span class="rating-label">5. Keadilan Penilaian</span>
+                    <div class="stars">
+                        <input type="radio" name="rating_keadilan" value="1" id="keadilan1"><label for="keadilan1">★</label>
+                        <input type="radio" name="rating_keadilan" value="2" id="keadilan2"><label for="keadilan2">★</label>
+                        <input type="radio" name="rating_keadilan" value="3" id="keadilan3"><label for="keadilan3">★</label>
+                        <input type="radio" name="rating_keadilan" value="4" id="keadilan4"><label for="keadilan4">★</label>
+                        <input type="radio" name="rating_keadilan" value="5" id="keadilan5"><label for="keadilan5">★</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-title-custom">Kritik & Saran</h3>
+            
+            <div class="feedback-grid">
+                <div class="form-group">
+                    <label>Kelebihan Dosen</label>
+                    <textarea id="kelebihan" rows="4" placeholder="Apa kelebihan dosen ini?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Saran Perbaikan</label>
+                    <textarea id="kekurangan" rows="4" placeholder="Apa yang perlu ditingkatkan?"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">Kirim Penilaian</button>
+        </form>
+
+        <div class="progress-section">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="progress-text">Penilaian Anda sangat berharga untuk peningkatan kualitas pendidikan di FPIK UBT</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 BPM FPIK UBT</p>
+    <p class="version">Version: 4.0.0 | Sistem Penilaian Kinerja Dosen</p>
+</footer>
+
+<script>
+    // Ganti dengan URL Web App Anda
+    const API_URL = 'https://script.google.com/macros/s/AKfycbxL4reIyZztS7Nei7_fq53POtCRKB6j1j5-q_gV0mq1tdVG-AMhN5v9iVCnn9hrmnaSog/exec';
+    
+    const form = document.getElementById('penilaianForm');
+    const alertBox = document.getElementById('alertMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function showAlert(message, type) {
+        alertBox.innerHTML = message;
+        alertBox.className = `alert ${type}`;
+        alertBox.style.display = 'flex';
+        setTimeout(() => { alertBox.style.display = 'none'; }, 5000);
+    }
+
+    function getRatingValue(name) {
+        const selected = document.querySelector(`input[name="${name}"]:checked`);
+        return selected ? parseInt(selected.value) : 0;
+    }
+
+    function validateForm() {
+        const nama = document.getElementById('nama').value.trim();
+        const nim = document.getElementById('nim').value.trim();
+        const prodi = document.getElementById('prodi').value;
+        const semester = document.getElementById('semester').value;
+        const namaDosen = document.getElementById('namaDosen').value;
+        const matakuliah = document.getElementById('matakuliah').value.trim();
+        
+        if (!nama || !nim || !prodi || !semester || !namaDosen || !matakuliah) {
+            showAlert('Mohon lengkapi semua data!', 'error');
+            return false;
+        }
+        if (!/^\d{9,10}$/.test(nim)) {
+            showAlert('NIM harus 9-10 digit angka!', 'error');
+            return false;
+        }
+        
+        const ratingFields = ['rating_materi', 'rating_metode', 'rating_kehadiran', 'rating_interaksi', 'rating_keadilan'];
+        for (let field of ratingFields) {
+            if (!document.querySelector(`input[name="${field}"]:checked`)) {
+                showAlert('Mohon beri bintang untuk semua aspek!', 'error');
+                return false;
+            }
+        }
+        return true;
+    }
+
+    async function kirimPenilaian() {
+        if (!validateForm()) return;
+        
+        const data = {
+            tanggal: new Date().toLocaleString('id-ID'),
+            nama: document.getElementById('nama').value.trim(),
+            nim: document.getElementById('nim').value.trim(),
+            prodi: document.getElementById('prodi').value,
+            semester: document.getElementById('semester').value,
+            emailResponden: document.getElementById('emailResponden').value.trim(),
+            dosen: document.getElementById('namaDosen').value,
+            matakuliah: document.getElementById('matakuliah').value.trim(),
+            rating1: getRatingValue('rating_materi'),
+            rating2: getRatingValue('rating_metode'),
+            rating3: getRatingValue('rating_kehadiran'),
+            rating4: getRatingValue('rating_interaksi'),
+            rating5: getRatingValue('rating_keadilan'),
+            kelebihan: document.getElementById('kelebihan').value.trim() || '-',
+            kekurangan: document.getElementById('kekurangan').value.trim() || '-'
+        };
+        
+        submitBtn.innerHTML = 'Mengirim...';
+        submitBtn.disabled = true;
+        
+        try {
+            await fetch(API_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+            showAlert('Penilaian berhasil dikirim. Terima kasih!', 'success');
+            
+            document.getElementById('nama').value = '';
+            document.getElementById('nim').value = '';
+            document.getElementById('emailResponden').value = '';
+            document.getElementById('matakuliah').value = '';
+            document.getElementById('kelebihan').value = '';
+            document.getElementById('kekurangan').value = '';
+            document.getElementById('prodi').value = '';
+            document.getElementById('semester').value = '';
+            document.getElementById('namaDosen').value = '';
+            document.querySelectorAll('.stars input').forEach(i => i.checked = false);
+        } catch (error) {
+            showAlert('Gagal mengirim. Silakan coba lagi.', 'error');
+        } finally {
+            submitBtn.innerHTML = 'Kirim Penilaian';
+            submitBtn.disabled = false;
+        }
+    }
+
+    form.addEventListener('submit', (e) => { e.preventDefault(); kirimPenilaian(); });
+    
+    // Rating stars hover effect
+    document.querySelectorAll('.stars label').forEach(label => {
+        label.addEventListener('mouseenter', function() {
+            const stars = this.closest('.stars');
+            const labels = stars.querySelectorAll('label');
+            const currentValue = this.htmlFor;
+            let found = false;
+            for (let i = 0; i < labels.length; i++) {
+                if (labels[i].htmlFor === currentValue) found = true;
+                if (found) labels[i].style.color = 'var(--accent)';
+                else labels[i].style.color = '#cbd5e1';
+            }
+        });
+        
+        label.addEventListener('mouseleave', function() {
+            const stars = this.closest('.stars');
+            const labels = stars.querySelectorAll('label');
+            const checked = stars.querySelector('input:checked');
+            if (checked) {
+                let foundChecked = false;
+                for (let i = 0; i < labels.length; i++) {
+                    if (labels[i].htmlFor === checked.id) foundChecked = true;
+                    if (foundChecked) labels[i].style.color = 'var(--accent)';
+                    else labels[i].style.color = '#cbd5e1';
+                }
+            } else {
+                labels.forEach(l => l.style.color = '#cbd5e1');
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>QR Code Resmi - BPM FPIK UBT</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="asset/image-asset/logo-bpm.png">
     <style>
         * {
             margin: 0;
@@ -190,7 +191,7 @@
     </div>
 
     <div class="url-box">
-        <div class="url-label">URL Website Resmi:</div>
+        <div class="url-label">URL Website Resmi (Terbaru):</div>
         <div class="url-text" id="current-url"></div>
     </div>
 
@@ -198,39 +199,46 @@
         Simpan QR Code (PNG)
     </button>
 
-    <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
+    <a href="../index.html" class="btn-back">← Kembali ke Beranda</a>
     <footer>
         Badan Perwakilan Mahasiswa<br>Fakultas Perikanan dan Ilmu Kelautan - UBT
     </footer>
 </div>
 
+<!-- Library QR Code (offline siap pakai via CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script>
     (function() {
-        const TARGET_URL = 'https://derrxme.github.io/static-web-bpm/';
+        // >>> URL BARU YANG SUDAAH DIUPDATE <<<
+        const TARGET_URL = 'https://bpmfpikubt22.github.io/static-web-bpm/';
         
+        // Tampilkan URL di halaman
         const urlElement = document.getElementById('current-url');
         if (urlElement) {
             urlElement.textContent = TARGET_URL;
         }
 
+        // Generate QR Code (ukuran 200x200, warna biru khas BPM)
         const qrcodeContainer = document.getElementById("qrcode");
         if (qrcodeContainer) {
+            // Kosongkan container jika ada isi lama
             qrcodeContainer.innerHTML = "";
             new QRCode(qrcodeContainer, {
                 text: TARGET_URL,
                 width: 200,
                 height: 200,
-                colorDark: "#0F4C81",
+                colorDark: "#0F4C81",    // Warna utama BPM
                 colorLight: "#FFFFFF",
                 correctLevel: QRCode.CorrectLevel.H
             });
         }
 
+        // Fungsi untuk mendownload QR Code sebagai PNG
         window.downloadQR = function() {
             const canvas = qrcodeContainer.querySelector('canvas');
             if (canvas) {
                 const link = document.createElement('a');
+                // Nama file: qrcode-bpm-resmi.png
                 link.download = 'qrcode-bpm-fpik-ubt.png';
                 link.href = canvas.toDataURL('image/png');
                 link.click();
